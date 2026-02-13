@@ -235,6 +235,19 @@ if (contactForm) {
     });
 }
 
+// ===== Email Link Handler =====
+const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+emailLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const email = link.getAttribute('href').replace('mailto:', '');
+        // Try opening Gmail compose window as fallback
+        if (!navigator.mailto) {
+            e.preventDefault();
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+        }
+    });
+});
+
 // ===== Resume Download Button =====
 const resumeBtn = document.getElementById('resume-btn');
 if (resumeBtn) {
