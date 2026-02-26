@@ -1,4 +1,35 @@
-// ...existing code...
+// ===== UI Theme Toggle =====
+(function () {
+    const STORAGE_KEY = 'portfolio-ui-theme';
+    const toggleInput = document.getElementById('ui-toggle-input');
+
+    // Read saved theme or default to 'modern'
+    const savedTheme = localStorage.getItem(STORAGE_KEY) || 'modern';
+
+    // Apply theme
+    function applyTheme(theme) {
+        document.body.classList.remove('ui-modern', 'ui-neo-brutalism');
+        if (theme === 'neo-brutalism') {
+            document.body.classList.add('ui-neo-brutalism');
+            if (toggleInput) toggleInput.checked = true;
+        } else {
+            document.body.classList.add('ui-modern');
+            if (toggleInput) toggleInput.checked = false;
+        }
+        localStorage.setItem(STORAGE_KEY, theme);
+    }
+
+    applyTheme(savedTheme);
+
+    // Toggle on checkbox change
+    if (toggleInput) {
+        toggleInput.addEventListener('change', () => {
+            const next = toggleInput.checked ? 'neo-brutalism' : 'modern';
+            applyTheme(next);
+        });
+    }
+})();
+
 
 // ===== Mobile Navigation Toggle =====
 const navToggle = document.getElementById('nav-toggle');
@@ -26,14 +57,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        
+
         if (targetId === '#') return;
-        
+
         const targetSection = document.querySelector(targetId);
         if (targetSection) {
             const headerHeight = document.querySelector('.header').offsetHeight;
             const targetPosition = targetSection.offsetTop - headerHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -48,12 +79,12 @@ const header = document.getElementById('header');
 
 function updateActiveNavLink() {
     const scrollPosition = window.scrollY + 150; // Offset for header height
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -63,7 +94,7 @@ function updateActiveNavLink() {
             });
         }
     });
-    
+
     // Handle home section
     if (window.scrollY < 100) {
         navLinks.forEach(link => {
@@ -200,17 +231,17 @@ messageInput.addEventListener('input', () => {
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const isNameValid = validateName();
         const isEmailValid = validateEmail();
         const isMessageValid = validateMessage();
-        
+
         if (isNameValid && isEmailValid && isMessageValid) {
             // Form is valid - in a real application, you would send the data to a server
             // For now, we'll just show a success message
             alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
-            
+
             // Remove any error states
             [nameInput, emailInput, messageInput].forEach(input => {
                 input.classList.remove('error');

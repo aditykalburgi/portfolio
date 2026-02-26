@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,39 @@
     <title>Full Stack Java Developer | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- ...existing code... -->
+    <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="neo-brutalism.css">
 </head>
-    <body>
-        <!-- ...existing code... -->
+
+<body class="ui-modern">
+    <!-- UI Toggle Button -->
+    <div class="toggle-container" id="ui-toggle" title="Switch UI Theme">
+        <input type="checkbox" class="toggle-input" id="ui-toggle-input" aria-label="Switch UI Theme">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 142" class="toggle">
+            <path
+                d="M71 142C31.7878 142 0 110.212 0 71C0 31.7878 31.7878 0 71 0C110.212 0 119 30 146 30C173 30 182 0 221 0C260 0 292 31.7878 292 71C292 110.212 260.212 142 221 142C181.788 142 173 112 146 112C119 112 110.212 142 71 142Z"
+                class="toggle-background"></path>
+            <rect rx="6" height="64" width="12" y="39" x="64" class="toggle-icon on"></rect>
+            <path
+                d="M221 91C232.046 91 241 82.0457 241 71C241 59.9543 232.046 51 221 51C209.954 51 201 59.9543 201 71C201 82.0457 209.954 91 221 91ZM221 103C238.673 103 253 88.6731 253 71C253 53.3269 238.673 39 221 39C203.327 39 189 53.3269 189 71C189 88.6731 203.327 103 221 103Z"
+                fill-rule="evenodd" class="toggle-icon off"></path>
+            <g filter="url('#goo')">
+                <rect fill="#fff" rx="29" height="58" width="116" y="42" x="13" class="toggle-circle-center"></rect>
+                <rect fill="#fff" rx="58" height="114" width="114" y="14" x="14" class="toggle-circle left"></rect>
+                <rect fill="#fff" rx="58" height="114" width="114" y="14" x="164" class="toggle-circle right"></rect>
+            </g>
+            <filter id="goo">
+                <feGaussianBlur stdDeviation="10" result="blur" in="SourceGraphic"></feGaussianBlur>
+                <feColorMatrix result="goo" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" mode="matrix"
+                    in="blur"></feColorMatrix>
+            </filter>
+        </svg>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -58,10 +86,12 @@
                 <div class="hero__image-wrapper">
                     <img src="images/adityPhoto111.jpeg" alt="Aditya Kalburgi" class="hero__image">
                     <div class="hero__social">
-                        <a href="https://www.linkedin.com/in/aditya-kalaburgi-080b5b267/" target="_blank" class="hero__social-link" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/aditya-kalaburgi-080b5b267/" target="_blank"
+                            class="hero__social-link" title="LinkedIn">
                             <img src="images/logo/LinkedIn_icon.svg.png" alt="LinkedIn" class="hero__social-icon">
                         </a>
-                        <a href="https://github.com/aditykalburgi" target="_blank" class="hero__social-link" title="GitHub">
+                        <a href="https://github.com/aditykalburgi" target="_blank" class="hero__social-link"
+                            title="GitHub">
                             <img src="images/logo/github-icon.png" alt="GitHub" class="hero__social-icon">
                         </a>
                         <a href="mailto:adityakalburgi304@gmail.com" class="hero__social-link" title="Gmail">
@@ -75,18 +105,16 @@
                     </h1>
                     <h2 class="hero__subtitle">Full Stack Java Developer</h2>
                     <p class="hero__description">
-                        Backend-focused Java & Spring Boot developer with expertise in building 
-                        scalable REST APIs, secure authentication systems, and modern frontend applications. 
+                        Backend-focused Java & Spring Boot developer with expertise in building
+                        scalable REST APIs, secure authentication systems, and modern frontend applications.
                         Passionate about creating robust, enterprise-ready solutions.
                     </p>
-                 <div class="hero__buttons">
-    <a href="#projects" class="btn btn--primary">View Projects</a>
-    <a href="resume/aditya kalburgi resume.pdf"
-       class="btn btn--secondary"
-       download>
-       Download Resume
-    </a>
-</div>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn--primary">View Projects</a>
+                        <a href="resume/aditya kalburgi resume.pdf" class="btn btn--secondary" download>
+                            Download Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,26 +127,28 @@
             <div class="about__content">
                 <div class="about__text">
                     <p class="about__paragraph">
-                        I am a dedicated <strong>Full Stack Java Developer</strong> specializing in 
-                        <strong>Java & Spring Boot</strong> backend development with strong frontend capabilities. 
-                        My expertise lies in designing and implementing scalable, secure, and efficient web applications.
+                        I am a dedicated <strong>Full Stack Java Developer</strong> specializing in
+                        <strong>Java & Spring Boot</strong> backend development with strong frontend capabilities.
+                        My expertise lies in designing and implementing scalable, secure, and efficient web
+                        applications.
                     </p>
                     <p class="about__paragraph">
-                        I excel in <strong>REST API design and development</strong>, creating well-structured 
-                        endpoints that follow industry best practices. My experience includes implementing 
-                        <strong>Spring Security</strong> and <strong>JWT-based authentication</strong> systems 
+                        I excel in <strong>REST API design and development</strong>, creating well-structured
+                        endpoints that follow industry best practices. My experience includes implementing
+                        <strong>Spring Security</strong> and <strong>JWT-based authentication</strong> systems
                         to ensure secure user management and data protection.
                     </p>
                     <p class="about__paragraph">
-                        On the frontend, I build responsive and interactive user interfaces using 
-                        <strong>HTML5, CSS3, and JavaScript (ES6+)</strong>. I focus on creating seamless 
+                        On the frontend, I build responsive and interactive user interfaces using
+                        <strong>HTML5, CSS3, and JavaScript (ES6+)</strong>. I focus on creating seamless
                         user experiences while maintaining clean, maintainable code.
                     </p>
                     <p class="about__paragraph">
-                        Through my academic projects and personal initiatives, I have gained hands-on 
-                        experience in <strong>database design</strong> (MongoDB, MySQL), 
-                        <strong>API integration</strong>, and <strong>system architecture</strong>. 
-                        I am committed to writing production-ready code and following software engineering best practices.
+                        Through my academic projects and personal initiatives, I have gained hands-on
+                        experience in <strong>database design</strong> (MongoDB, MySQL),
+                        <strong>API integration</strong>, and <strong>system architecture</strong>.
+                        I am committed to writing production-ready code and following software engineering best
+                        practices.
                     </p>
                 </div>
             </div>
@@ -137,13 +167,13 @@
                         <div class="skill__card">
                             <span class="skill__name">Java</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Python</span>
                         </div>
                         <div class="skill__card">
                             <span class="skill__name">Spring Boot</span>
                         </div>
-                          <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Spring Mvc</span>
                         </div>
                         <div class="skill__card">
@@ -163,8 +193,8 @@
                         </div>
                         <div class="skill__card">
                             <span class="skill__name">JDBC</span>
-                     
-                       </div>
+
+                        </div>
                     </div>
                 </div>
 
@@ -187,13 +217,13 @@
                         <div class="skill__card">
                             <span class="skill__name">React.js</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Tailwind CSS</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Next.js</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Vite</span>
                         </div>
                     </div>
@@ -209,20 +239,20 @@
                         <div class="skill__card">
                             <span class="skill__name">MySQL</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Firebase</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Supabase</span>
                         </div>
-                          <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Redis</span>
                         </div>
-            
-                        
+
+
                     </div>
                 </div>
-                
+
 
                 <!-- Tools & DevOps -->
                 <div class="skills__category">
@@ -249,26 +279,26 @@
                         <div class="skill__card">
                             <span class="skill__name">Render</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Jenkins</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Aws</span>
                         </div>
-                              <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">kafka</span>
                         </div>
-                            <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Maven</span>
                         </div>
-                            <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Gradle</span>
                         </div>
                     </div>
-                    
+
                 </div>
 
-                   <div class="skills__category">
+                <div class="skills__category">
                     <h3 class="skills__category-title">Testing</h3>
                     <div class="skills__grid">
                         <div class="skill__card">
@@ -277,14 +307,14 @@
                         <div class="skill__card">
                             <span class="skill__name">Mockito</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Jira</span>
                         </div>
-                         <div class="skill__card">
+                        <div class="skill__card">
                             <span class="skill__name">Selenium</span>
                         </div>
-            </div>
-        </div>
+                    </div>
+                </div>
     </section>
 
     <!-- Projects Section -->
@@ -296,29 +326,35 @@
                 <div class="project__card">
                     <h3 class="project__title">Balaji Plates E-Commerce Application</h3>
                     <p class="project__description">
-                        A full-stack MERN e-commerce platform where users can browse products, manage shopping carts, and securely checkout using Clerk authentication. Features a modern React frontend, Node.js/Express backend, and MongoDB database.
+                        A full-stack MERN e-commerce platform where users can browse products, manage shopping carts,
+                        and securely checkout using Clerk authentication. Features a modern React frontend,
+                        Node.js/Express backend, and MongoDB database.
                     </p>
                     <div class="project__details">
                         <div class="project__detail-item">
-                            <strong>Problem:</strong> Build a scalable e-commerce solution with real-time inventory, secure user authentication (Clerk), and seamless shopping experience.
+                            <strong>Problem:</strong> Build a scalable e-commerce solution with real-time inventory,
+                            secure user authentication (Clerk), and seamless shopping experience.
                         </div>
                         <div class="project__detail-item">
-                            <strong>Architecture:</strong> 
+                            <strong>Architecture:</strong>
                             <ul class="project__architecture">
-                                <li><strong>Frontend:</strong> React.js, Clerk Authentication, HTML5, CSS3, JavaScript (ES6+) - Responsive UI with dynamic cart management</li>
+                                <li><strong>Frontend:</strong> React.js, Clerk Authentication, HTML5, CSS3, JavaScript
+                                    (ES6+) - Responsive UI with dynamic cart management</li>
                                 <li><strong>Backend:</strong> Node.js, Express.js, REST APIs</li>
                                 <li><strong>Database:</strong> MongoDB for flexible product and user data storage</li>
                             </ul>
                         </div>
                         <div class="project__detail-item">
-                            <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Clerk, HTML5, CSS3, JavaScript
+                            <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Clerk, HTML5, CSS3,
+                            JavaScript
                         </div>
                     </div>
                     <div class="project__links">
                         <a href="https://github.com/aditykalburgi/ReactDeploy" target="_blank" class="project__link">
                             <span>GitHub</span>
                         </a>
-                        <a href="https://reactdeploy-frontend-oy6m.onrender.com" target="_blank" class="project__link project__link--demo">
+                        <a href="https://reactdeploy-frontend-oy6m.onrender.com" target="_blank"
+                            class="project__link project__link--demo">
                             <span>Live Demo</span>
                         </a>
                     </div>
@@ -328,24 +364,27 @@
                 <div class="project__card">
                     <h3 class="project__title">Crypto Trading / Paper Trading Platform</h3>
                     <p class="project__description">
-                        A paper trading platform for cryptocurrency where users can simulate trading without real money. 
+                        A paper trading platform for cryptocurrency where users can simulate trading without real money.
                         Features real-time price tracking, portfolio management, and trading history.
                     </p>
                     <div class="project__details">
                         <div class="project__detail-item">
-                            <strong>Problem:</strong> Provide a risk-free environment for users to learn cryptocurrency 
+                            <strong>Problem:</strong> Provide a risk-free environment for users to learn cryptocurrency
                             trading strategies and understand market dynamics.
                         </div>
                         <div class="project__detail-item">
                             <strong>Architecture:</strong>
                             <ul class="project__architecture">
-                                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript - Real-time price updates via WebSocket simulation</li>
-                                <li><strong>Backend:</strong> Spring Boot REST APIs with scheduled tasks for price updates</li>
+                                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript - Real-time price updates via
+                                    WebSocket simulation</li>
+                                <li><strong>Backend:</strong> Spring Boot REST APIs with scheduled tasks for price
+                                    updates</li>
                                 <li><strong>Database:</strong> MySQL for transactional data and user portfolios</li>
                             </ul>
                         </div>
                         <div class="project__detail-item">
-                            <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Spring Boot, MySQL, REST APIs, Spring Scheduler
+                            <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Spring Boot, MySQL, REST APIs, Spring
+                            Scheduler
                         </div>
                     </div>
                     <div class="project__links">
@@ -362,78 +401,89 @@
                 <div class="project__card">
                     <h3 class="project__title">Ryze AI – UI Component Generator </h3>
                     <p class="project__description">
-                        An AI-powered UI component generator that converts natural language descriptions into production-ready React components. 
-                        Features live code editing, syntax highlighting, and instant component preview using Monaco Editor and Sandpack.
+                        An AI-powered UI component generator that converts natural language descriptions into
+                        production-ready React components.
+                        Features live code editing, syntax highlighting, and instant component preview using Monaco
+                        Editor and Sandpack.
                     </p>
                     <div class="project__details">
                         <div class="project__detail-item">
-                            <strong>Problem:</strong> Enable developers to rapidly generate production-ready React components 
+                            <strong>Problem:</strong> Enable developers to rapidly generate production-ready React
+                            components
                             from natural language descriptions using AI, with live preview and editing capabilities.
                         </div>
                         <div class="project__detail-item">
                             <strong>Architecture:</strong>
                             <ul class="project__architecture">
-                                <li><strong>Frontend:</strong> React.js with Monaco Editor and Sandpack for live code editing and component preview</li>
-                                <li><strong>Backend:</strong> Node.js & Express.js REST APIs with Groq AI API integration</li>
-                                <li><strong>Database:</strong> MongoDB for storing generated components and user data</li>
-                                <li><strong>AI Integration:</strong> Groq AI API for natural language to React component conversion</li>
+                                <li><strong>Frontend:</strong> React.js with Monaco Editor and Sandpack for live code
+                                    editing and component preview</li>
+                                <li><strong>Backend:</strong> Node.js & Express.js REST APIs with Groq AI API
+                                    integration</li>
+                                <li><strong>Database:</strong> MongoDB for storing generated components and user data
+                                </li>
+                                <li><strong>AI Integration:</strong> Groq AI API for natural language to React component
+                                    conversion</li>
                             </ul>
                         </div>
                         <div class="project__detail-item">
-                            <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Groq AI API, Monaco Editor, Sandpack, Zod, CORS
+                            <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Groq AI API, Monaco
+                            Editor, Sandpack, Zod, CORS
                         </div>
                     </div>
                     <div class="project__links">
                         <a href="https://github.com/aditykalburgi/ryze-ai" target="_blank" class="project__link">
                             <span>GitHub</span>
                         </a>
-                        <a href="https://ryze-ai-client.vercel.app" target="_blank" class="project__link project__link--demo">
+                        <a href="https://ryze-ai-client.vercel.app" target="_blank"
+                            class="project__link project__link--demo">
                             <span>Live Demo</span>
                         </a>
                     </div>
                 </div>
 
-              <!-- Project: React Native Food Listing App -->
-<div class="project__card">
-    <h3 class="project__title">React Native Food Listing App</h3>
-    <p class="project__description">
-        A cross-platform mobile application that displays food items with modern UI components, 
-        category filtering, and dynamic listing. Built using React Native CLI with reusable components 
-        and optimized performance.
-    </p>
+                <!-- Project: React Native Food Listing App -->
+                <div class="project__card">
+                    <h3 class="project__title">React Native Food Listing App</h3>
+                    <p class="project__description">
+                        A cross-platform mobile application that displays food items with modern UI components,
+                        category filtering, and dynamic listing. Built using React Native CLI with reusable components
+                        and optimized performance.
+                    </p>
 
-    <div class="project__details">
+                    <div class="project__details">
 
-        <div class="project__detail-item">
-            <strong>Problem:</strong> Develop a scalable mobile food listing application with smooth UI, 
-            reusable components, and efficient state management.
-        </div>
+                        <div class="project__detail-item">
+                            <strong>Problem:</strong> Develop a scalable mobile food listing application with smooth UI,
+                            reusable components, and efficient state management.
+                        </div>
 
-        <div class="project__detail-item">
-            <strong>Architecture:</strong>
-            <ul class="project__architecture">
-                <li><strong>Frontend:</strong> React Native CLI with functional components and hooks</li>
-                <li><strong>Navigation:</strong> React Navigation for screen routing</li>
-                <li><strong>State Management:</strong> React Hooks / Context API</li>
-                <li><strong>Backend (Optional/Future):</strong> REST APIs or Firebase integration</li>
-            </ul>
-        </div>
+                        <div class="project__detail-item">
+                            <strong>Architecture:</strong>
+                            <ul class="project__architecture">
+                                <li><strong>Frontend:</strong> React Native CLI with functional components and hooks
+                                </li>
+                                <li><strong>Navigation:</strong> React Navigation for screen routing</li>
+                                <li><strong>State Management:</strong> React Hooks / Context API</li>
+                                <li><strong>Backend (Optional/Future):</strong> REST APIs or Firebase integration</li>
+                            </ul>
+                        </div>
 
-        <div class="project__detail-item">
-            <strong>Tech Stack:</strong> React Native, JavaScript, React Navigation, Metro Bundler, Android Studio, java,
-        </div>
+                        <div class="project__detail-item">
+                            <strong>Tech Stack:</strong> React Native, JavaScript, React Navigation, Metro Bundler,
+                            Android Studio, java,
+                        </div>
 
-    </div>
+                    </div>
 
-    <div class="project__links">
-        <a href="https://github.com/aditykalburgi/FoodListing" target="_blank" class="project__link">
-            <span>GitHub</span>
-        </a>
+                    <div class="project__links">
+                        <a href="https://github.com/aditykalburgi/FoodListing" target="_blank" class="project__link">
+                            <span>GitHub</span>
+                        </a>
 
-        <a href="#" target="_blank" class="project__link project__link--demo">
-            <span>Live Demo</span>
-        </a>
-    </div>
+                        <a href="#" target="_blank" class="project__link project__link--demo">
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -454,42 +504,51 @@
                         </div>
                         <p class="experience__company">hegel technology</p>
                         <ul class="experience__responsibilities">
-                            <li>Developed and maintained <strong>RESTful APIs</strong> using Spring Boot for multiple microservices</li>
-                            <li>Implemented <strong>JWT-based authentication</strong> and authorization using Spring Security</li>
+                            <li>Developed and maintained <strong>RESTful APIs</strong> using Spring Boot for multiple
+                                microservices</li>
+                            <li>Implemented <strong>JWT-based authentication</strong> and authorization using Spring
+                                Security</li>
                             <li>Designed and optimized <strong>database schemas</strong> using MongoDB and MySQL</li>
-                            <li>Integrated <strong>Hibernate/JPA</strong> for efficient data persistence and query optimization</li>
-                            <li>Collaborated on <strong>API design</strong> and documentation following REST best practices</li>
-                            <li>Participated in code reviews and contributed to <strong>system architecture</strong> discussions</li>
-                            
+                            <li>Integrated <strong>Hibernate/JPA</strong> for efficient data persistence and query
+                                optimization</li>
+                            <li>Collaborated on <strong>API design</strong> and documentation following REST best
+                                practices</li>
+                            <li>Participated in code reviews and contributed to <strong>system architecture</strong>
+                                discussions</li>
+
                         </ul>
                     </div>
                 </div>
 
- <!-- Education -->
-<div class="experience__section">
-    <h3 class="experience__section-title">Education</h3>
+                <!-- Education -->
+                <div class="experience__section">
+                    <h3 class="experience__section-title">Education</h3>
 
-    <div class="experience__item">
-        <div class="experience__header">
-            <h4 class="experience__title">Bachelor of Computer Applications (BCA)</h4>
-            <span class="experience__period">2022 - 2025</span>
+                    <div class="experience__item">
+                        <div class="experience__header">
+                            <h4 class="experience__title">Bachelor of Computer Applications (BCA)</h4>
+                            <span class="experience__period">2022 - 2025</span>
+                        </div>
+
+                        <p class="experience__company">
+                            Karnataka University Dharwad
+                        </p>
+
+                        <ul class="experience__responsibilities">
+                            <li>Relevant Coursework: Data Structures, Database Management Systems, Artificial
+                                Intelligence, Web Technologies, Software Engineering</li>
+                            <li>Academic Projects: Full-stack web applications, MERN stack projects, REST API
+                                development, Database design</li>
+                            <li>Final Year Project: Quick Commerce Web Application using MERN Stack with secure
+                                authentication and order management</li>
+                            <li>Technologies Used: Java, Spring Boot, MongoDB, MySQL, React, HTML5, CSS3, JavaScript,
+                                Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <p class="experience__company">
-           Karnataka University Dharwad
-        </p>
-
-        <ul class="experience__responsibilities">
-            <li>Relevant Coursework: Data Structures, Database Management Systems, Artificial Intelligence, Web Technologies, Software Engineering</li>
-            <li>Academic Projects: Full-stack web applications, MERN stack projects, REST API development, Database design</li>
-            <li>Final Year Project: Quick Commerce Web Application using MERN Stack with secure authentication and order management</li>
-            <li>Technologies Used: Java, Spring Boot, MongoDB, MySQL, React, HTML5, CSS3, JavaScript, Git</li>
-        </ul>
-    </div>
-</div>
-</div>
-</div>
-</section>
+    </section>
 
 
 
@@ -500,20 +559,24 @@
             <div class="contact__container">
                 <div class="contact__info">
                     <p class="contact__description">
-                        I'm open to discussing opportunities, collaborations, or answering any questions. 
+                        I'm open to discussing opportunities, collaborations, or answering any questions.
                         Feel free to reach out!
                     </p>
                     <div class="contact__links">
                         <a href="mailto:adityakalburgi304@gmail.com" class="contact__link">
-                            <img src="images/logo/Gmail_icon_(2020).svg" alt="Gmail" class="contact__icon" style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
+                            <img src="images/logo/Gmail_icon_(2020).svg" alt="Gmail" class="contact__icon"
+                                style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
                             <span>Email</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/aditya-kalburgi-080b5b267/" target="_blank" class="contact__link">
-                            <img src="images/logo/LinkedIn_icon.svg.png" alt="LinkedIn" class="contact__icon" style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
+                        <a href="https://www.linkedin.com/in/aditya-kalburgi-080b5b267/" target="_blank"
+                            class="contact__link">
+                            <img src="images/logo/LinkedIn_icon.svg.png" alt="LinkedIn" class="contact__icon"
+                                style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
                             <span>LinkedIn</span>
                         </a>
                         <a href="https://github.com/aditykalburgi" target="_blank" class="contact__link">
-                            <img src="images/logo/github-icon.png" alt="GitHub" class="contact__icon" style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
+                            <img src="images/logo/github-icon.png" alt="GitHub" class="contact__icon"
+                                style="height: 20px; width: 20px; vertical-align: middle; margin-right: 8px;">
                             <span>GitHub</span>
                         </a>
                     </div>
@@ -531,7 +594,8 @@
                     </div>
                     <div class="form__group">
                         <label for="message" class="form__label">Message</label>
-                        <textarea id="message" name="message" class="form__input form__textarea" rows="5" required></textarea>
+                        <textarea id="message" name="message" class="form__input form__textarea" rows="5"
+                            required></textarea>
                         <span class="form__error" id="message-error"></span>
                     </div>
                     <button type="submit" class="btn btn--primary btn--full">Send Message</button>
@@ -545,15 +609,15 @@
         <div class="container">
             <div class="footer__content">
                 <p class="footer__copyright">
-                   
+
                 </p>
                 <div class="footer__social">
-                  
+
+                </div>
             </div>
-        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
