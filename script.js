@@ -6,7 +6,7 @@
     // Read saved theme or default to 'modern'
     const savedTheme = localStorage.getItem(STORAGE_KEY) || 'modern';
 
-    // Apply theme
+    // Apply theme instantly (used on page load)
     function applyTheme(theme) {
         document.body.classList.remove('ui-modern', 'ui-neo-brutalism');
         if (theme === 'neo-brutalism') {
@@ -19,13 +19,22 @@
         localStorage.setItem(STORAGE_KEY, theme);
     }
 
+    // Smooth switch: fade out → swap class → fade in
+    function switchTheme(theme) {
+        document.body.classList.add('ui-switching');
+        setTimeout(() => {
+            applyTheme(theme);
+            document.body.classList.remove('ui-switching');
+        }, 350);
+    }
+
     applyTheme(savedTheme);
 
     // Toggle on checkbox change
     if (toggleInput) {
         toggleInput.addEventListener('change', () => {
             const next = toggleInput.checked ? 'neo-brutalism' : 'modern';
-            applyTheme(next);
+            switchTheme(next);
         });
     }
 })();
