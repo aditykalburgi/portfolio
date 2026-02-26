@@ -1,21 +1,24 @@
-// ===== UI Theme Toggle =====
+// ===== UI Theme Switcher (Three-State) =====
 (function () {
     const STORAGE_KEY = 'portfolio-ui-theme';
-    const toggleInput = document.getElementById('ui-toggle-input');
+    const themeRadios = document.querySelectorAll('input[name="theme-choice"]');
 
     // Read saved theme or default to 'modern'
     const savedTheme = localStorage.getItem(STORAGE_KEY) || 'modern';
 
     // Apply theme instantly (used on page load)
     function applyTheme(theme) {
-        document.body.classList.remove('ui-modern', 'ui-neo-brutalism');
-        if (theme === 'neo-brutalism') {
-            document.body.classList.add('ui-neo-brutalism');
-            if (toggleInput) toggleInput.checked = true;
-        } else {
-            document.body.classList.add('ui-modern');
-            if (toggleInput) toggleInput.checked = false;
-        }
+        // Remove all potential theme classes
+        document.body.classList.remove('ui-modern', 'ui-neo-brutalism', 'ui-sketch');
+
+        // Map value to class and apply
+        const themeClass = theme === 'neo-brutalism' ? 'ui-neo-brutalism' : (theme === 'sketch' ? 'ui-sketch' : 'ui-modern');
+        document.body.classList.add(themeClass);
+
+        // Check the corresponding radio button
+        const targetRadio = document.querySelector(`input[name="theme-choice"][value="${theme}"]`);
+        if (targetRadio) targetRadio.checked = true;
+
         localStorage.setItem(STORAGE_KEY, theme);
     }
 
@@ -28,15 +31,17 @@
         }, 350);
     }
 
+    // Initialize with saved theme
     applyTheme(savedTheme);
 
-    // Toggle on checkbox change
-    if (toggleInput) {
-        toggleInput.addEventListener('change', () => {
-            const next = toggleInput.checked ? 'neo-brutalism' : 'modern';
-            switchTheme(next);
+    // Add event listeners to all theme radio buttons
+    themeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                switchTheme(e.target.value);
+            }
         });
-    }
+    });
 })();
 
 
