@@ -289,8 +289,8 @@ body.ui-neo-brutalism .hero__image-wrapper {
 }
 
 body.ui-neo-brutalism .hero__image {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border: var(--border-width) solid var(--ink);
     box-shadow: 20px 20px 0px 0px var(--neo-accent), 20px 20px 0px 4px var(--ink);
