@@ -848,7 +848,7 @@ body.ui-modern .fade-in.visible {
     }
 
     body.ui-modern .hero__content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
     }

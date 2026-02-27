@@ -325,6 +325,7 @@ body.ui-sketch .hero__image {
     width: 350px;
     height: 350px;
     object-fit: cover;
+    object-position: center 25%;
     margin: 0 auto;
     display: block;
     /* Triangle clip-path for profile picture */
